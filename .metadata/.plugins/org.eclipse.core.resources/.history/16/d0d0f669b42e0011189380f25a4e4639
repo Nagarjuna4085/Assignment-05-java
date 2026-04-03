@@ -1,0 +1,38 @@
+package Javaprograms;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class NumberOfDaysOfMonth {
+//	7. Write a Java program to find the number of days in a month.
+//
+//	Test Data
+//	Input a month number: 2
+//	Input a year: 2016
+//	Expected Output :
+//	February 2016 has 29 days
+	
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		try {
+			System.out.println("Enter a month number:..");
+			int month = sc.nextInt();
+			System.out.println("Enter a year number:..");
+			int year = sc.nextInt();
+			 LocalDate date =  LocalDate.of(year,month,1);
+			 System.out.println(date.lengthOfMonth());
+
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error "+ e);
+		}finally {
+			sc.close();
+		}
+				
+		
+		
+	}
+
+}

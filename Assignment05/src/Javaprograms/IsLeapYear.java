@@ -1,0 +1,32 @@
+package Javaprograms;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class IsLeapYear {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Enter year");
+			int num = sc.nextInt();
+			LocalDate date =  LocalDate.of(num,2,1);
+			int days = date.lengthOfMonth();
+			if(days == 29) {
+				System.out.println("Leap year");
+			}else {
+				System.out.println("No Leap year");
+				
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error"+e);
+		}finally {
+			sc.close();
+		}
+
+	}
+
+}

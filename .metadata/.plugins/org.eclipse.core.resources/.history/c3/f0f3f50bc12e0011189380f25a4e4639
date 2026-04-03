@@ -1,0 +1,42 @@
+package Javaprograms;
+
+import java.util.Scanner;
+
+public class EvenOrOdd {
+	
+	public static String EvenOrOdd(int num) {
+		try {
+			int flag = Math.abs(num%2);
+			switch(flag) {
+			case 0:
+				return "even number";
+			case 1:
+				return "odd number";
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return e+"";
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);		
+		try {
+			System.out.println("Enter number ;");
+			int num = sc.nextInt();
+			String res = EvenOrOdd(num);
+			System.out.println(res);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error from main method"+e);
+		}finally {
+			sc.close();
+		}
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package Javaprograms;
+
+import java.util.Scanner;
+
+public class SignOFANumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			double num = sc.nextDouble();
+			String result = num >= 0 ? "Positive Number" : "Negative Number";		
+			System.out.println(result);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Expectd error :"+e);
+		}finally {
+			sc.close();
+		}
+	}
+
+}

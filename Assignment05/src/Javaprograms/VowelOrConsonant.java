@@ -1,0 +1,35 @@
+package Javaprograms;
+
+import java.util.Scanner;
+
+public class VowelOrConsonant {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			System.out.println("Enter a letter");
+			String s = sc.next();
+			char c = s.charAt(0);
+			int ascii = c;
+//			boolean flag = (ascii >=65 && ascii <=90) || (ascii >= 97 && ascii <=122);
+//			boolean isLetter = Character.isLetter(c)
+			if(s.length() > 1 || !Character.isLetter(c)) {
+				System.out.println("Invali input");
+			}else {	
+				String vowels = "aeiouAEIOU";
+				if(vowels.indexOf(c) >= 0) {
+					System.out.println("vowel");
+				}else {
+					System.out.println("consonent");
+				}
+				System.out.println(c);
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error  "+ e);
+		}finally {
+			sc.close();
+		}
+	}
+
+}

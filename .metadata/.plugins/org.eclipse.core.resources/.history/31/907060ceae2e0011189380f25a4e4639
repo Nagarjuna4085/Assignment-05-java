@@ -1,0 +1,24 @@
+package Javaprograms;
+
+import java.util.Scanner;
+
+public class WeekdayName {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String[] weekName = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+		try {
+			System.out.println("Enter a number between 1 an 7");
+			
+			int num = sc.nextInt();
+			System.out.println(weekName[num-1]);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("exception.." + e);
+		}finally {
+			sc.close();
+		}
+	}
+
+}

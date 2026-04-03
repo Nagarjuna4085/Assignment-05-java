@@ -1,0 +1,22 @@
+package Javaprograms;
+
+import java.util.Scanner;
+
+public class CompareFloatingNumbers {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			System.out.println("Enter first floating point number1");
+			double num1 = sc.nextDouble();
+			System.out.println("Enter first floating point number 1");
+			double num2 = sc.nextDouble();
+			   double formatNum1 = (int)(num1*1000)/1.0;
+			   System.out.println(formatNum1);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}
